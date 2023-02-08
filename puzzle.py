@@ -31,24 +31,24 @@ def check_vertical(board):
     """This function checks if vertical of the board doesn`t contain same
     numbers and returns True.
     >>> check_vertical(["**** ****",\
-    "***1 ****", "**  3****", "* 4 1****",\
-    "     9 5 ", " 6  83  *", "3   1  **",\
-    "  8  2***", "  2  ****"])
+"***1 ****", "**  3****", "* 4 1****",\
+"     9 5 ", " 6  83  *", "3   1  **",\
+"  8  2***", "  2  ****"])
     False
     >>> check_vertical(["****2****",\
-    "***14****", "**  7****", "* 3 9****",\
-    "1    6 5 ", " 7  38  *", "3   1  **",\
-    "  8   ***", "  1  ****"])
+"***14****", "**  7****", "* 3 9****",\
+"1    6 5 ", " 7  38  *", "3   1  **",\
+"  8   ***", "  1  ****"])
     True
     >>> check_vertical(["****1****",\
-    "***1 ****", "**527****", "* 4 2****",\
-    " 5   813 ", " 6  83  *", "9 6 5  **",\
-    "  8  2***", "  2  ****"])
+"***1 ****", "**527****", "* 4 2****",\
+" 5   813 ", " 6  83  *", "9 6 5  **",\
+"  8  2***", "  2  ****"])
     True
     >>> check_vertical(["**** ****",\
-    "***2 ****", "**   ****", "* 7 6****",\
-    " 449 732 ", " 8  52  *", "2 3 6  **",\
-    "  6  1***", "     ****"])
+"***2 ****", "**   ****", "* 7 6****",\
+" 449 732 ", " 8  52  *", "2 3 6  **",\
+"  6  1***", "     ****"])
     False"""
     for i in range(9):
         lst = []
@@ -58,8 +58,9 @@ def check_vertical(board):
                     lst.append(board[j][i])
                 else:
                     return False
-    
-    def third_function(lst):
+    return True
+
+def third_function(lst):
     """
     Function checks if all numbers in the same colour on board are unique.
     If it is so, function returns True/else: returns False
@@ -104,14 +105,18 @@ def validate_board(board):
     """Function checks if game field is filled in the right way.
     (Verticals,horisontals and figures of the same colour have unique numbers)
     >>> validate_board(["****7****",\
-    "***17****",\
-    "**  3****",\
-    "* 4 1****",\
-    "     9 2 ",\
-    " 6  83  *",\
-    "3   1  **",\
-    "  8  2***",\
-    "  2  ****"])
+"***17****",\
+"**  3****",\
+"* 4 1****",\
+"     9 2 ",\
+" 6  83  *",\
+"3   1  **",\
+"  8  2***",\
+"  2  ****"])
     False
     """
     return first_function(board) and check_vertical(board) and third_function(board)
+
+if __name__=='__main__':
+    import doctest
+    print(doctest.testmod())
