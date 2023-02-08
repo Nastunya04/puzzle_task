@@ -38,3 +38,28 @@ def third_function(lst):
             if number != 1:
                 return False
     return True
+
+def valid_board(board):
+    """Function checks if game field is filled in the right way.
+    (Verticals,horisontals and figures of the same colour have unique numbers)
+    >>> valid_board(["****7****",\
+    "***17****",\
+    "**  3****",\
+    "* 4 1****",\
+    "     9 2 ",\
+    " 6  83  *",\
+    "3   1  **",\
+    "  8  2***",\
+    "  2  ****"])
+    False
+    >>> valid_board("****1****",\
+    "*** 2****",\
+    "  3****",\
+    "*   4****",\
+    "1   56789",\
+    "        *",\
+    "2      ",\
+    "      ***",\
+    "3 4  ****")
+    True"""
+    return first_function(board) and check_vertical(board) and third_function(board)
