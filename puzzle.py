@@ -1,3 +1,6 @@
+"""
+There are 3 functions, that helped us to write the last main function
+"""
 def first_function(board):
     """
     >>> first_function([\
