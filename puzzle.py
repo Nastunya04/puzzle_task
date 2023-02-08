@@ -1,5 +1,9 @@
 """
 There are 3 functions, that helped us to write the last main function
+https://github.com/Nastunya04/puzzle_task.git
+Матвісів Уляна
+Дмитрів Христина
+Диня Анастасія
 """
 def first_function(board):
     """
