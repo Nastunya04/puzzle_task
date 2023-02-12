@@ -5,9 +5,9 @@ https://github.com/Nastunya04/puzzle_task.git
 Дмитрів Христина
 Диня Анастасія
 """
-def first_function(board):
+def check_rows(board):
     """
-    >>> first_function([\
+    >>> check_rows([\
     "**** ****",\
     "***1 ****",\
     "  3****",\
@@ -60,11 +60,11 @@ def check_vertical(board):
                     return False
     return True
 
-def third_function(lst):
+def check_colours(lst):
     """
     Function checks if all numbers in the same colour on board are unique.
     If it is so, function returns True/else: returns False
-    >>> third_function(["**** ****",\
+    >>> check_colours(["**** ****",\
     "***1 ****",\
     "**  3****",\
     "* 4 1****",\
@@ -115,7 +115,7 @@ def validate_board(board):
 "  2  ****"])
     False
     """
-    return first_function(board) and check_vertical(board) and third_function(board)
+    return check_rows(board) and check_vertical(board) and check_colours(board)
 
 if __name__=='__main__':
     import doctest
