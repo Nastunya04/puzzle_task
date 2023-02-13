@@ -75,8 +75,8 @@ def check_colours(lst):
     "  2  ****"])
     True
     """
-    i = 4
-    j = 5
+    i = len(lst) // 2
+    j = i + 1
     num = 0
     k = 9
     while k != 4:
